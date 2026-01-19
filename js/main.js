@@ -55,11 +55,6 @@
 })(jQuery);
 
 //button disappears
-var collapseTarget = document.getElementById('collapseE');
-var toggleButton = document.getElementById('toggleButton');
-
-// Add an event listener for when the collapse element has finished hiding
-collapseTarget.addEventListener('hidden.bs.collapse', function () {
-  // Hide the button using JavaScript
-  toggleButton.style.display = 'none';
+$('#collapseE').on('hidden.bs.collapse', function () {
+  $('#toggleButton').hide();
 });
