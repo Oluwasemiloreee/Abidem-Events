@@ -54,7 +54,5 @@
     
 })(jQuery);
 
-//button disappears
-$('#collapseE').on('hidden.bs.collapse', function () {
-  $('#toggleButton').hide();
+
 });
