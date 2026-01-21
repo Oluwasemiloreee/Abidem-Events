@@ -86,6 +86,6 @@
   });
 
   collapse.addEventListener("hidden.bs.collapse", () => {
-    navbar.style.backgroundColor = "transparent"; // background when closed
+    navbar.style.backgroundColor = "#ffc107"; // background when closed
   });
 
