@@ -62,13 +62,13 @@ const myNavbar = document.getElementById('myNavbar');
 const navbarCollapse = document.getElementById('navbarCollapse');
 
 // Add an event listener for when the collapse menu is about to be shown
-navbarNav.addEventListener('show.bs.collapse', function () {
+navbarCollapse.addEventListener('show.bs.collapse', function () {
   // Add the background class (e.g., bg-dark, bg-primary, etc.) to the navbar
   myNavbar.classList.add('bg-warning'); 
 });
 
 // Add an event listener for when the collapse menu is about to be hidden
-navbarNav.addEventListener('hide.bs.collapse', function () {
+navbarCollapse.addEventListener('hide.bs.collapse', function () {
   // Remove the background class from the navbar
   myNavbar.classList.remove('bg-dark');
 });
