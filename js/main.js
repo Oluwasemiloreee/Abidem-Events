@@ -64,13 +64,13 @@
 // Add an event listener for when the collapse menu is about to be shown
  navbarC.addEventListener('show.bs.collapse', function () {
   // Add the background class (e.g., bg-dark, bg-primary, etc.) to the navbar
-  myNavbar.classList.add('bg-warning'); 
+  myNavbar.classList.add('bg-primary'); 
 });
 
 // Add an event listener for when the collapse menu is about to be hidden
  navbarC.addEventListener('hide.bs.collapse', function () {
   // Remove the background class from the navbar
-  myNavbar.classList.remove('bg-warning');
+  myNavbar.classList.remove('bg-dark');
 });
 
 
