@@ -56,3 +56,19 @@
 
 
 });
+
+// Get the navbar and the collapsible menu elements
+const myNavbar = document.getElementById('myNavbar');
+const navbarNav = document.getElementById('navbarCollapse');
+
+// Add an event listener for when the collapse menu is about to be shown
+navbarNav.addEventListener('show.bs.collapse', function () {
+  // Add the background class (e.g., bg-dark, bg-primary, etc.) to the navbar
+  myNavbar.classList.add('bg-dark'); 
+});
+
+// Add an event listener for when the collapse menu is about to be hidden
+navbarNav.addEventListener('hide.bs.collapse', function () {
+  // Remove the background class from the navbar
+  myNavbar.classList.remove('bg-dark');
+});
