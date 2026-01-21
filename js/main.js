@@ -57,35 +57,6 @@
 
 });
 
-// Get the navbar and the collapsible menu elements
- const myNavbar = document.getElementById('myNavbar');
- const navbarC = document.getElementById('navbarC');
-
-// Add an event listener for when the collapse menu is about to be shown
- navbarC.addEventListener('show.bs.collapse', function () {
-  // Add the background class (e.g., bg-dark, bg-primary, etc.) to the navbar
-  myNavbar.classList.add('bg-primary'); 
-});
-
-// Add an event listener for when the collapse menu is about to be hidden
- navbarC.addEventListener('hide.bs.collapse', function () {
-  // Remove the background class from the navbar
-  myNavbar.classList.remove('bg-dark');
-});
 
 
-
-  // const navbar = document.getElementById("myNavbar");
-  // const collapse = document.getElementById("navbarC");
-
-  // default state (not expanded)
-  // navbar.style.backgroundColor = "transparent";
-
-  // collapse.addEventListener("shown.bs.collapse", () => {
-  //   navbar.style.backgroundColor = "#ffc107";   // background when expanded
-  // });
-
-  // collapse.addEventListener("hidden.bs.collapse", () => {
-  //   navbar.style.backgroundColor = "#ffc107"; // background when closed
-  // });
-
+ 
