@@ -76,7 +76,7 @@
 
 
   const navbar = document.getElementById("myNavbar");
-  const collapse = document.getElementById("navbarCollapse");
+  const collapse = document.getElementById("navbarC");
 
   // default state (not expanded)
   // navbar.style.backgroundColor = "transparent";
