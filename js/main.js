@@ -68,9 +68,9 @@
 });
 
 // Add an event listener for when the collapse menu is about to be hidden
-// navbarC.addEventListener('hide.bs.collapse', function () {
+ navbarC.addEventListener('hide.bs.collapse', function () {
   // Remove the background class from the navbar
- // myNavbar.classList.remove('bg-dark');
+  myNavbar.classList.remove('bg-dark');
 });
 
 
