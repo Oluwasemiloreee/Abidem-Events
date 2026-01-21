@@ -59,7 +59,7 @@
 
 // Get the navbar and the collapsible menu elements
 const myNavbar = document.getElementById('myNavbar');
-const navbarNav = document.getElementById('navbarCollapse');
+const navbarCollapse = document.getElementById('navbarCollapse');
 
 // Add an event listener for when the collapse menu is about to be shown
 navbarNav.addEventListener('show.bs.collapse', function () {
