@@ -186,12 +186,12 @@
 /* contact */
 .info-item {
     padding: 20px 0px 30px 0;
-    box-shadow: 0 0 20px rgba(255, 193, 7, 0.3);
+    box-shadow: 0 0 20px rgba(255, 191, 0, 0.6);
     margin-top: 30px;
     border-radius: 20%;
     color: #fff;
     font-size: 20px;
-    background-color: #909480;
+    background-color: rgba(26, 25, 22, 0.3);
 }
 
 .info-item i {
