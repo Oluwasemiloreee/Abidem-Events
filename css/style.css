@@ -9,6 +9,10 @@
 }
 
 
+html {
+  scroll-padding-top: 70px; /* height of sticky header */
+}
+
 /*** Spinner ***/
 #spinner {
     opacity: 0;
