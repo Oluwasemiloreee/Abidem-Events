@@ -1,3 +1,16 @@
+ :root {
+     --gold: #dfa60b;
+     --gold-light: #E4C97E;
+     --gold-dark: #9A7A2E;
+     --gold-faint: rgba(201, 168, 76, 0.08);
+     --black: #0A0A0A;
+     --black-soft: #141414;
+     --black-card: #1A1A1A;
+     --black-border: #2C2C2C;
+     --text-main: #F0E8D5;
+     --text-muted: #9A9080;
+ }
+
 .back-to-top {
     position: fixed;
     display: none;
