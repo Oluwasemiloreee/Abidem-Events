@@ -1,4 +1,4 @@
-console.log("main.js loaded");
+
 (function ($) {
     "use strict";
 
