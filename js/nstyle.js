@@ -41,7 +41,7 @@ EQUIPMENT.forEach(eq => {
   grid.appendChild(div);
 });
 
-window.toggleEquip(id) = function(id) {
+window.toggleEquip = function(id) {
   const item = document.getElementById('ei-' + id);
   const cb   = document.getElementById('chk-' + id);
   item.classList.toggle('active', cb.checked);
