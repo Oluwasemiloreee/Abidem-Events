@@ -119,6 +119,228 @@
     </div>
       <!--Welcome end  -->
 
+       <!-- ══════════════════════════════════════
+             BOOKING MODAL
+        ══════════════════════════════════════ -->
+      <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+
+            <!-- Header -->
+            <div class="modal-header">
+              <div>
+                <h5 class="modal-title" id="bookingModalLabel">
+                  <i class="bi bi-stars"></i> Book Us Now
+                </h5>
+                <div class="modal-subtitle">Complete the form below — we'll confirm within 24 hours</div>
+              </div>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <!-- Body -->
+            <div class="modal-body">
+
+              <!-- Step Indicator -->
+              <div class="step-indicator" id="stepIndicator">
+                <div class="step active" id="step-ind-1">
+                  <div class="step-dot">1</div>
+                  <div class="step-name">You</div>
+                </div>
+                <div class="step-line" id="line-1-2"></div>
+                <div class="step" id="step-ind-2">
+                  <div class="step-dot">2</div>
+                  <div class="step-name">Event</div>
+                </div>
+                <div class="step-line" id="line-2-3"></div>
+                <div class="step" id="step-ind-3">
+                  <div class="step-dot">3</div>
+                  <div class="step-name">Equipment</div>
+                </div>
+                <div class="step-line" id="line-3-4"></div>
+                <div class="step" id="step-ind-4">
+                  <div class="step-dot">4</div>
+                  <div class="step-name">Payment</div>
+                </div>
+              </div>
+
+              <form id="bookingForm" novalidate>
+
+                <!-- ── STEP 1: Customer Info ── -->
+                <div class="booking-step active" id="stepPanel1">
+                  <div class="section-label"><i class="bi bi-person-fill"></i> Customer Information</div>
+                  <div class="row g-3">
+                    <div class="col-12">
+                      <label class="form-label">Full Name <span class="req">*</span></label>
+                      <div class="input-group">
+                        <span class="input-group-text"><i class="bi bi-person"></i></span>
+                        <input type="text" class="form-control" id="fullName" placeholder="e.g. Amara Okafor"
+                          required />
+                        <div class="invalid-feedback">Please enter your full name.</div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label">Email Address <span class="req">*</span></label>
+                      <div class="input-group">
+                        <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                        <input type="email" class="form-control" id="emailAddress" placeholder="you@example.com"
+                          required />
+                        <div class="invalid-feedback">Please enter a valid email.</div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label">Phone Number <span class="req">*</span></label>
+                      <div class="input-group">
+                        <span class="input-group-text"><i class="bi bi-telephone"></i></span>
+                        <input type="tel" class="form-control" id="phoneNumber" placeholder="+234 800 000 0000"
+                          required />
+                        <div class="invalid-feedback">Please enter your phone number.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ── STEP 2: Event Info ── -->
+                <div class="booking-step" id="stepPanel2">
+                  <div class="section-label"><i class="bi bi-calendar-event-fill"></i> Event Information</div>
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <label class="form-label">Event Type <span class="req">*</span></label>
+                      <div class="input-group">
+                        <span class="input-group-text"><i class="bi bi-tag"></i></span>
+                        <select class="form-select" id="eventType" required>
+                          <option value="" disabled selected>Select event type</option>
+                          <option>Wedding</option>
+                          <option>Birthday Party</option>
+                          <option>Conference</option>
+                          <option>Concert</option>
+                          <option>Burial / Funeral</option>
+                          <option>Corporate Event</option>
+                          <option>Naming Ceremony</option>
+                          <option>Graduation Party</option>
+                          <option>Religious Gathering</option>
+                          <option>Product Launch</option>
+                          <option>Other</option>
+                        </select>
+                        <div class="invalid-feedback">Please select an event type.</div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label">Event Date <span class="req">*</span></label>
+                      <div class="input-group">
+                        <span class="input-group-text"><i class="bi bi-calendar3"></i></span>
+                        <input type="date" class="form-control" id="eventDate" required />
+                        <div class="invalid-feedback">Please select an event date.</div>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <label class="form-label">Event Location <span class="req">*</span></label>
+                      <div class="input-group">
+                        <span class="input-group-text"><i class="bi bi-geo-alt"></i></span>
+                        <input type="text" class="form-control" id="eventLocation"
+                          placeholder="e.g. 14 Broad Street, Lagos Island" required />
+                        <div class="invalid-feedback">Please enter the event location.</div>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <label class="form-label">Additional Notes</label>
+                      <textarea class="form-control" id="eventNotes" rows="3"
+                        placeholder="Tell us anything else we should know about your event…"></textarea>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ── STEP 3: Equipment ── -->
+                <div class="booking-step" id="stepPanel3">
+                  <div class="section-label"><i class="bi bi-box-seam-fill"></i> Equipment Rental</div>
+                  <p style="font-size:0.78rem;color:var(--text-muted);margin-bottom:1.2rem;">
+                    Select the items you need. Enter quantity for each selected item.
+                  </p>
+
+                  <div class="equipment-grid" id="equipmentGrid">
+                    <!-- Items injected by JS -->
+                  </div>
+                </div>
+
+                <!-- ── STEP 4: Payment ── -->
+                <div class="booking-step" id="stepPanel4">
+                  <div class="section-label"><i class="bi bi-credit-card-fill"></i> Payment Option</div>
+
+                  <div class="d-flex flex-column gap-2 mb-3" id="paymentOptions">
+
+                    <label class="payment-option selected" for="payLater">
+                      <input class="form-check-input" type="radio" name="paymentMethod" id="payLater" value="pay_later"
+                        checked />
+                      <div>
+                        <div class="payment-label"><i class="bi bi-clock-history me-1" style="color:var(--gold)"></i>
+                          Book
+                          Now, Pay Later</div>
+                        <div class="payment-desc">Submit your booking request. Our team will contact you
+                          within 24 hours to confirm and arrange payment.</div>
+                      </div>
+                    </label>
+
+                    <label class="payment-option" for="payBank">
+                      <input class="form-check-input" type="radio" name="paymentMethod" id="payBank"
+                        value="bank_transfer" />
+                      <div>
+                        <div class="payment-label"><i class="bi bi-bank me-1" style="color:var(--gold)"></i>
+                          Bank Transfer</div>
+                        <div class="payment-desc">We'll send you our bank details after confirming your
+                          booking. Payment expected 48 hrs before the event.</div>
+                      </div>
+                    </label>
+
+                    <label class="payment-option" for="payOnline">
+                      <input class="form-check-input" type="radio" name="paymentMethod" id="payOnline" value="online" />
+                      <div>
+                        <div class="payment-label"><i class="bi bi-shield-check me-1" style="color:var(--gold)"></i>
+                          Online
+                          Payment <span
+                            style="font-size:0.65rem;background:var(--gold);color:var(--black);padding:1px 6px;margin-left:4px;font-weight:700;letter-spacing:0.1em">COMING
+                            SOON</span></div>
+                        <div class="payment-desc">Secure card payment via Paystack / Flutterwave.
+                          Integration in progress.</div>
+                      </div>
+                    </label>
+                  </div>
+
+                  <div class="notice-banner">
+                    <i class="bi bi-info-circle-fill"></i>
+                    <span>Your booking is not finalised until you receive a confirmation message from our team.
+                      No payment is processed without your explicit approval.</span>
+                  </div>
+                </div>
+
+              </form>
+
+              <!-- Success state -->
+              <div class="booking-success" id="bookingSuccess">
+                <div class="success-icon"><i class="bi bi-check-lg"></i></div>
+                <div class="success-title">Booking Received!</div>
+                <p class="success-msg">
+                  Thank you for choosing us. Your booking request has been submitted successfully.<br>
+                  Our team will reach out to you at <strong id="successEmail" style="color:var(--gold-light)"></strong>
+                  within 24 hours to confirm your event details.
+                </p>
+              </div>
+
+            </div><!-- /modal-body -->
+
+            <!-- book us now Footer -->
+            <div class="modal-footer d-flex justify-content-between align-items-center" id="modalFooter">
+              <button type="button" class="btn-cancel" id="prevBtn" onclick="prevStep()" style="display:none">
+                <i class="bi bi-arrow-left me-1"></i> Back
+              </button>
+              <button type="button" class="btn-cancel ms-auto" data-bs-dismiss="modal" id="cancelBtn">Cancel</button>
+              <button type="button" class="btn-submit ms-2" id="nextBtn" onclick="nextStep()">
+                Next <i class="bi bi-arrow-right"></i>
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
     <!-- About Start -->
     <div class="container-fluid bg-secondary">
       <div class="container">
