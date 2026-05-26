@@ -1,3 +1,5 @@
+document.addEventListener("DOMContentLoaded", function () {
+
 /* ══ EQUIPMENT DATA ══ */
 const EQUIPMENT = [
   { id:'chairs',      icon:'bi-people-fill',        name:'Chairs' },
@@ -55,7 +57,7 @@ function updateIndicator(step) {
     if (i < step)  ind.classList.add('done');
     if (i === step) ind.classList.add('active');
   }
-  lines
+  // lines
   for (let i = 1; i < TOTAL_STEPS; i++) {
     const line = document.getElementById(`line-${i}-${i+1}`);
     if (line) line.classList.toggle('done', i < step);
@@ -125,7 +127,7 @@ function prevStep() {
 
 /* ── Submit ── */
 function submitBooking() {
-  Collect data (frontend only)
+  // Collect data (frontend only)
   const payload = {
     customer: {
       name:  document.getElementById('fullName').value,
@@ -169,7 +171,7 @@ document.getElementById('bookingModal').addEventListener('hidden.bs.modal', () =
   document.getElementById('bookingForm').reset();
   document.querySelectorAll('.is-valid,.is-invalid').forEach(el => el.classList.remove('is-valid','is-invalid'));
   document.querySelectorAll('.equip-item').forEach(el => el.classList.remove('active'));
-  Restore footer
+  // Restore footer
   document.getElementById('modalFooter').innerHTML = `
     <button type="button" class="btn-cancel" id="prevBtn" onclick="prevStep()" style="display:none"><i class="bi bi-arrow-left me-1"></i> Back</button>
     <button type="button" class="btn-cancel ms-auto" data-bs-dismiss="modal" id="cancelBtn">Cancel</button>
@@ -190,4 +192,6 @@ document.addEventListener('change', e => {
 
 // Init
 showStep(1);
+
+});
 
