@@ -12,9 +12,9 @@ const EQUIPMENT = [
   { id:'projectors',  icon:'bi-projector-fill',      name:'Projectors' },
   { id:'lighting',    icon:'bi-lightbulb-fill',      name:'Lighting' },
   { id:'decorations', icon:'bi-stars',               name:'Decorations' },
-  { id:'generator',   icon:'bi-lightning-charge-fill',name:'Generator' },
+  { id:'Backdrop',   icon:'bi-back-fill',            name:'backdrop' },
   { id:'stage',       icon:'bi-display-fill',        name:'Stage / Platform' },
-  { id:'fans',        icon:'bi-tornado',             name:'Standing Fans' },
+  // { id:'fans',        icon:'bi-tornado',             name:'Standing Fans' },
   { id:'other',       icon:'bi-plus-circle-fill',    name:'Other (specify in notes)' },
 ];
 
