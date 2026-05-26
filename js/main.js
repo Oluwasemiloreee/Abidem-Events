@@ -1,4 +1,3 @@
-
 (function ($) {
     "use strict";
 
@@ -59,7 +58,5 @@
 });
 
 
-console.log("JS WORKING");
 
-alert("Welcome on Board!");
  
