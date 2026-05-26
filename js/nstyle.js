@@ -20,27 +20,44 @@ const EQUIPMENT = [
 
 /* ── Build Equipment Grid ── */
 const grid = document.getElementById('equipmentGrid');
-EQUIPMENT.forEach(eq => {
-  const div = document.createElement('div');
-  div.className = 'equip-item';
-  div.id = 'ei-' + eq.id;
-  div.innerHTML = `
-    <input class="form-check-input" type="checkbox" id="chk-${eq.id}" onchange="toggleEquip('${eq.id}')"/>
-    <i class="bi ${eq.icon} equip-icon"></i>
-    <div class="equip-info"><div class="equip-name">${eq.name}</div></div>
-    <div class="equip-qty">
-      <input type="number" class="form-control" id="qty-${eq.id}" min="1" value="1" placeholder="Qty"/>
-    </div>`;
-  div.addEventListener('click', e => {
-    if (!e.target.matches('input')) {
-      const cb = div.querySelector('input[type=checkbox]');
-      cb.checked = !cb.checked;
-      toggleEquip(eq.id);
-    }
-  });
-  grid.appendChild(div);
-});
 
+if (grid) {
+  EQUIPMENT.forEach(eq => {
+    const div = document.createElement('div');
+    div.className = 'equip-item';
+    div.id = 'ei-' + eq.id;
+
+    div.innerHTML = `
+      <input class="form-check-input" type="checkbox"
+        id="chk-${eq.id}"
+        onchange="toggleEquip('${eq.id}')"/>
+
+      <i class="bi ${eq.icon} equip-icon"></i>
+
+      <div class="equip-info">
+        <div class="equip-name">${eq.name}</div>
+      </div>
+
+      <div class="equip-qty">
+        <input type="number"
+          class="form-control"
+          id="qty-${eq.id}"
+          min="1"
+          value="1"
+          placeholder="Qty"/>
+      </div>`;
+
+    div.addEventListener('click', e => {
+      if (!e.target.matches('input')) {
+        const cb = div.querySelector('input[type=checkbox]');
+        cb.checked = !cb.checked;
+        toggleEquip(eq.id);
+      }
+    });
+
+    grid.appendChild(div);
+  });
+}
 window.toggleEquip = function(id) {
   const item = document.getElementById('ei-' + id);
   const cb   = document.getElementById('chk-' + id);
