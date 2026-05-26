@@ -11,7 +11,7 @@ const EQUIPMENT = [
   { id:'microphones', icon:'bi-mic-fill',            name:'Microphones' },
   { id:'projectors', icon:'bi-projector-fill',       name:'Projectors' },
   { id:'lighting',    icon:'bi-lightbulb-fill',      name:'Lighting' },
-  { id:'decorations', icon:'bi-stars',               name:'Decorations' },
+  { id:'decorations', icon:'bi-balloon-heart-fill',  name:'Decorations' },
   { id:'backdrops', icon:'bi-window-fullscreen',     name:'Backdrops' },  
   { id:'stage',       icon:'bi-display-fill',        name:'Stage / Platform' },
   // { id:'fans',        icon:'bi-tornado',             name:'Standing Fans' },
