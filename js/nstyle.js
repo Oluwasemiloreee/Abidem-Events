@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+  console.log("JS STARTED");
+
 /* ══ EQUIPMENT DATA ══ */
 const EQUIPMENT = [
   { id:'chairs',      icon:'bi-people-fill',        name:'Chairs' },
@@ -39,7 +41,7 @@ EQUIPMENT.forEach(eq => {
   grid.appendChild(div);
 });
 
-function toggleEquip(id) {
+window.toggleEquip(id) = function(id) {
   const item = document.getElementById('ei-' + id);
   const cb   = document.getElementById('chk-' + id);
   item.classList.toggle('active', cb.checked);
@@ -111,7 +113,7 @@ function validateStep(step) {
   return true; // Steps 3 & 4 have no hard requirements
 }
 
-function nextStep() {
+window.nextStep = function() {
   if (currentStep < TOTAL_STEPS) {
     if (!validateStep(currentStep)) return;
     currentStep++;
@@ -121,12 +123,12 @@ function nextStep() {
   }
 }
 
-function prevStep() {
+window.prevStep = function() {
   if (currentStep > 1) { currentStep--; showStep(currentStep); }
 }
 
 /* ── Submit ── */
-function submitBooking() {
+window.submitBooking = function() {
   // Collect data (frontend only)
   const payload = {
     customer: {
@@ -193,5 +195,6 @@ document.addEventListener('change', e => {
 // Init
 showStep(1);
 
+console.log("JS FINISHED");  
 });
 
